@@ -19,7 +19,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           record: true
-          command: npm run test:report 
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
