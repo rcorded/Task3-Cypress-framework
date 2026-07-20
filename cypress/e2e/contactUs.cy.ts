@@ -1,18 +1,16 @@
-import { contactUsPage } from '../../pages/telnyx/contactUsPage';
-import invalidEmailData from '../../fixtures/invalidEmailData.json';
-import invalidPhoneData from '../../fixtures/invalidPhoneData.json';
+import { contactUsPage } from '../pageobjects/contactUsPage';
+import invalidEmailData from '../fixtures/invalidEmailData.json';
+import invalidPhoneData from '../fixtures/invalidPhoneData.json';
 
 describe('Negative Frontend Validation of Form', () => {
-  
   beforeEach(() => {
-    contactUsPage.visit();
+    cy.visit(contactUsPage.PAGE_URL);
   });
 
   describe('Negative Frontend Validation of "Business email" Field', () => {
     invalidEmailData.forEach(({ id, testScenario, input }) => {    
-      it(`TC-6: ${id} - ${testScenario}: Input "${input}"`, () => {
+      it(`TC-2: ${id} - ${testScenario}: Input "${input}"`, () => {
         contactUsPage.fillInvalidEmail(input);
-
         // Since the exact error message is unknown, the test checks whether an error message is present at all
         contactUsPage.emailErrorMessage.should('be.visible'); 
         contactUsPage.emailInput
@@ -24,7 +22,7 @@ describe('Negative Frontend Validation of Form', () => {
 
   describe('Negative Frontend Validation of "Phone Number" Field', () => {
     invalidPhoneData.forEach(({ id, testScenario, input}) => {
-      it(`TC-5: ${id} - ${testScenario}: Input "${input}"`, () => {
+      it(`TC-1: ${id} - ${testScenario}: Input "${input}"`, () => {
         contactUsPage.fillInvalidPhone(input);
         contactUsPage.phoneErrorMessage.should('be.visible');
         contactUsPage.phoneInput

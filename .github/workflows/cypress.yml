@@ -2,9 +2,9 @@ name: Cypress E2E Tests with GitHub Pages Report
 
 on:
   push:
-    branches: [ "main", "LUX-5-task3-cypress" ]
+    branches: [ "main"]
   pull_request:
-    branches: [ "main", "LUX-5-task3-cypress" ]
+    branches: [ "main"]
 
 jobs:
   cypress-run:
