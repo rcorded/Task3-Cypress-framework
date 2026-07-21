@@ -1,4 +1,4 @@
-# Redmine and Telnyx Cypress E2E Tests
+# Telnyx Cypress E2E Tests
 [Telnyx Test cases](https://docs.google.com/spreadsheets/d/1eNaDr4WTsBuC0JEtp6ykBSierkGl94C5CFpRU_oxSCc/edit?usp=sharing) 
 
 ## Summary of repo
