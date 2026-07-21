@@ -1,0 +1,31 @@
+{
+  "name": "task3_cypress",
+  "version": "1.0.0",
+  "description": "E2E tests for Redmine and Telnyx using Cypress and TypeScript",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test:headless": "cypress run",
+    "test:headed": "cypress run --headed",
+    "test:chrome": "cypress run --browser chrome",
+    "test:report": "cypress run --reporter cypress-mochawesome-reporter"
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "testing",
+    "typescript",
+    "redmine",
+    "telnyx",
+    "automation",
+    "qa"
+  ],
+  "author": "Ruslan Bolduma",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@types/node": "^26.1.1",
+    "cypress": "^15.18.1",
+    "cypress-mochawesome-reporter": "^3.8.4",
+    "typescript": "^6.0.3"
+  }
+}
