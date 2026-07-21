@@ -11,6 +11,8 @@ cypress/reports/
 mochawesome-report/
 
 .env
+cypress.env.json
+
 
 .vscode/
 .idea/

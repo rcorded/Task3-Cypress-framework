@@ -22,15 +22,15 @@ Commands:
   open                        Open the Cypress Test Runner (Interactive UI)
   run                         Run all tests in default headless mode
   headed                      Run all tests in headed mode
-  browser <name>              Run all tests in a specific browser (e.g., chrome, firefox, edge)
+  browser <name>              Run all tests in a specific browser (e.g., chrome, electron, edge)
   spec <path> [browser]       Run a specific test file (optionally in a specific browser)
   report                      Run tests and generate an HTML report using Mochawesome
   help                        Show this help message
 
 Examples:
-  $(basename "$0") browser firefox
-  $(basename "$0") spec cypress/e2e/login.spec.ts
-  $(basename "$0") spec cypress/e2e/login.spec.ts chrome
+  $(basename "$0") browser chrome
+  $(basename "$0") spec cypress/e2e/solutions.cy.ts
+  $(basename "$0") spec cypress/e2e/solutions.cy.ts chrome
 EOF
 }
 
@@ -76,7 +76,7 @@ case "$COMMAND" in
         ensure_in_project_root
         BROWSER_NAME=${2:-}
         if [[ -z "$BROWSER_NAME" ]]; then
-            log_error "Please specify a browser. Options: chrome, firefox, edge, electron."
+            log_error "Please specify a browser. Options: chrome, edge, electron."
             log_info "Usage: $(basename "$0") browser <name>"
             exit 1
         fi
